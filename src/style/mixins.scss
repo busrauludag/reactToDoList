@@ -1,0 +1,36 @@
+/* Variables */
+$body-bg: #f0efe9;
+$button-green: #67e3a4;
+$button-shadow-color: rgba(0,0,0,0.5);
+$input-shadow-color: rgba(0,0,0,0.08);
+$link-color: #cbcbc4;
+$input-border-color: #f1f0eb;
+$item-color: #a1a1a1;
+$done-item-color: #eee;
+
+
+/* Mixins ----- */
+@mixin box-shadow ($shadow){
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin hover{
+  &:hover{ 
+    @content;
+  }
+}
+
+@mixin before{
+  &:before{ 
+    @content;
+  }
+}
+
+@mixin focus{
+  &:focus{
+    @content;
+  }
+}
+/* Mixins ----- */

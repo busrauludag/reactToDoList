@@ -1,0 +1,87 @@
+/* Login -------- */
+.signin {
+  @media (max-width: 768px) {
+    max-width: 90%;
+  }
+}
+
+.form-wrapper {
+  height: 100vh;
+
+  &__title {
+    color: $button-green;
+  }
+
+  &__links {
+    a {
+      color: $link-color;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+
+  .mail-wrapper, .pass-wrapper {
+    position: relative;
+    @include before {
+      font-family: FontAwesome;
+      position: absolute;
+      top: 13px;
+      left: 15px;
+    }
+  }
+
+  .mail-wrapper {
+    @include before {
+      content: '\f003';
+    }
+  }
+
+  .pass-wrapper {
+    @include before {
+      content: '\f084';
+    }
+  }
+
+  .form-control {
+    border-color: $input-border-color;
+    height: 50px;
+    border-radius: 10px;
+    @include box-shadow(0px 0px 7px 0px $input-shadow-color);
+
+    @include focus {
+      border-color: transparent;
+      @include box-shadow(none);
+    }
+
+    &.mail {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &.pass {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  .btn {
+    background-color: $button-green;
+    border-color: transparent;
+    font-weight: bold;
+    width: 100px;
+    height: 45px;
+    border-radius: 20px;
+    @include box-shadow(3px 3px 5px 0px $button-shadow-color);
+
+    @include focus {
+      border-color: transparent;
+      background-color: $button-green;
+      @include box-shadow(none);
+    }
+
+    @include hover {
+      background-color: $button-green;
+      border-color: transparent !important;
+    }
+  }
+}
+/* Login End -------- */

@@ -1,0 +1,134 @@
+/* List Page -------- */
+.todolist {
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+  }
+
+  &__wrapper {
+    height: 100vh;
+  }
+
+  .card {
+    border-radius: 10px;
+    border: none;
+    @include box-shadow(0px 0px 7px 0px $input-shadow-color);
+  }
+
+  .add-form {
+    &-wrapper {
+      position: relative;
+
+      .form-control {
+        border: none;
+        border-bottom: 1px solid #f1f1f1;
+
+        @include focus {
+          @include box-shadow(none);
+        }
+      }
+    }
+    &-button {
+      position: absolute;
+      bottom: -45px;
+      left: 45%;
+      right: auto;
+      z-index: 5;
+
+      @media (max-width: 768px) {
+        left: 40%;
+      }
+
+      button {
+        background-color: $button-green;
+        border-color: $body-bg;
+        border-width: 5px;
+        font-size: 20px;
+        width: 53px;
+        height: 53px;
+
+        @include focus {
+          background-color: $button-green;
+          @include box-shadow(none);
+        }
+
+        @include hover {
+          background-color: $button-green;
+        }
+      }
+    }
+  }
+
+  .list-group {
+    border-radius: 10px;
+    border: none;
+    max-height: 300px;
+    overflow: scroll;
+
+    &-item {
+      height: 57px;
+      border-color: transparent;
+      display: flex;
+      align-items: center;
+
+      a {
+        flex: 1;
+      }
+
+      .form-check-inline {
+        width: 30px;
+        margin: 0 5px;
+      }
+      .form-check-input {
+        width: 30px;
+        height: 30px;
+      }
+
+      span {
+        display: inline-block;
+        line-height: 30px;
+        width: 100%;
+
+        @media (min-width: 992px) {
+          width: 92%;
+        }
+
+        @media (min-width: 768px) {
+          width: 97%;
+        }
+
+        i {
+          font-style: normal;
+          font-size: 11px;
+          font-weight: 300;
+        }
+
+        &.is-done {
+          text-decoration: line-through;
+          color: $done-item-color;
+        }
+      }
+
+      a {
+        color: $item-color;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .delete-btn {
+        display: none;
+        width: 30px;
+        height: 30px;
+        line-height: 1;
+      }
+
+      @include hover {
+        cursor: pointer;
+        .delete-btn {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+/* List Page End --------*/

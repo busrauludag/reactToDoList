@@ -1,17 +1,27 @@
 {
-  "name": "servissoft-project",
+  "name": "reactToDoList",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "font-awesome": "^4.7.0",
+    "json-server": "^0.16.1",
+    "lodash": "^4.17.19",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
+    "react-hook-google-maps": "^0.0.3",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "json-server": "json-server --watch db.json --port 3003",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
