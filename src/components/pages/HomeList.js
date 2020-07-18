@@ -7,6 +7,7 @@ import Footer from './../Footer';
 import Create from '../Create';
 
 const HomeList = () => {
+
   const [todos, setTodo] = useState([]);
 
   useEffect(() => {
@@ -94,7 +95,7 @@ const HomeList = () => {
     <div className="container todolist">
       <div className="todolist__wrapper d-flex flex-column justify-content-center align-items-center">
         <Title />
-        <Create />
+        <Create loadTodos={loadTodos} />
         <div className="card w-100 mt-2">
           <div className="card-body p-0">
             <ul className="list-group">
