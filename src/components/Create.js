@@ -22,6 +22,9 @@ const Create = ({ loadTodos }) => {
       .then((res) => {
         loadTodos();
       });
+    setTodo({
+      title: ''
+    })
   }
 
   return (

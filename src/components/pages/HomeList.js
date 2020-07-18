@@ -14,63 +14,14 @@ const HomeList = () => {
     loadTodos();
   }, []);
 
-  // const selectionChanged = e => {
-  //   setTodo({
-  //     ...todos,
-  //     isCompleted: !e.target.value
-  //   })
-  // }
-
-  const selectionChanged = async (e, id) => {
-    // setTodo({
-    //   ...todos,
-    //   isCompleted: e.target.value
-    // })
-    // await axios.put(`${todoUrl}${id}`, todos);
-    // setTodo(
-    //   todos.map(todo => {
-    //     if(todo.id === id) {
-    //       return {
-    //         ...todo,
-    //         isCompleted: !todo.isCompleted
-    //       }
-    //     }
-    //     return todo;
-    //   })
-    // );
-
-    // let updatedTodo = {
-    //   isCompleted: !(e.target.checked)
-    // }
-
-    setTodo(
-      todos.map(todo => {
-        if(todo.id === id) {
-          return {
-            ...todo,
-            isCompleted: !e.target.value
-          }
-        }
-        return todo;
-      })
-    )
-
-    await axios.put(`${todoUrl}${id}`, todos);
-
-    // todos.map(todo => {
-    //   if(todo.id === id) {
-    //     return {
-    //       ...todo,
-    //       isCompleted: !todo.isCompleted
-    //     }
-    //   }
-    //   return todo;
-    // })
+  const selectionChanged = async (e, todo) => {
+    const updatedTodo = {
+      ...todo,
+      isCompleted: !todo.isCompleted
+    }
+    await axios.put(`${todoUrl}${todo.id}`, updatedTodo);
+    loadTodos();
   }
-
-  // const onSubmit = async (id) => {
-  //   await axios.put(`${todoUrl}${id}`, todos);
-  // }
 
   const loadTodos = async () => {
     const result = await axios.get(`${todoUrl}`);
@@ -107,7 +58,8 @@ const HomeList = () => {
                     </span>
                   </Link>
                   <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="checkbox" defaultChecked={item.isCompleted} name={`isCompleted${item.id}`} value={item.isCompleted} onClick={e => selectionChanged(e, item.id)} />
+                    <input className="form-check-input" type="checkbox" defaultChecked={item.isCompleted} name={`isCompleted${item.id}`} value={item.isCompleted} 
+                    onChange={e => selectionChanged(e, item)} />
                   </div>
                   <div className="form-check-inline">
                     <button className="btn btn-danger btn-sm delete-btn rounded-circle p-1"
