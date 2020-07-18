@@ -6,6 +6,11 @@ email: busra@gmail.com
 password: 12345
 
 
+## For run npm start and json server concurrently
+### `npm run start:dev`  --> npm start + npm run json-server
+
+
+
 ## For loading db.json
 
 In the project directory, you can run:
