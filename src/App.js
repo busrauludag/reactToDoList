@@ -1,7 +1,7 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/scss/font-awesome.scss';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import SignIn from './components/pages/SignIn';
 import HomeList from './components/pages/HomeList';
@@ -17,16 +17,22 @@ function App() {
   };
 
   localStorage.setItem('user', JSON.stringify(userInfo));
-  // const userData = localStorage.getItem('user');
+  const userData = localStorage.getItem('user');
 
   return (
     <Router>
       <div className="App">
         <UserInfo />
         <Switch>
-          {/* {
-            !userData ? <Redirect to='/login' /> : <Redirect to='/todolist' />
-          } */}
+          <Route
+            exact
+            path="/"
+            render={() => {
+              return (
+                userData ? <Redirect to="/todolist" /> : <Redirect to="/login" /> 
+              )
+            }}
+          />
           <Route exact path="/login" component={SignIn} />
           <Route exact path="/todolist" component={HomeList} />
           <Route exact path="/todolist/:id" component={Detail} />
