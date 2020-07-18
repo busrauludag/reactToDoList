@@ -21,17 +21,17 @@ const Detail = () => {
 
   useEffect(() => {
     loadTodo();
-  },);
+  });
 
-  return(
+  return (
     <div className="container detail">
       <UserInfo />
       <div className="detail__wrapper d-flex flex-column justify-content-center align-items-center">
         <Title />
         <div className="card w-100 mb-4">
           <div className="card-body pb-5">
-            <h5 className="card-title mb-3 py-2">{ todo.title }</h5>
-            <p className="card-text">{ todo.description }</p>
+            <h5 className="card-title mb-3 py-2">{todo.title}</h5>
+            <p className="card-text">{todo.description}</p>
           </div>
           <Link to={'/todolist'} className="btn btn-primary text-center">
             <i className="fa fa-chevron-left" aria-hidden="true"></i>

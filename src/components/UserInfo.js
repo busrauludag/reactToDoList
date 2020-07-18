@@ -5,8 +5,8 @@ const UserInfo = () => {
 
   return (
     <div className="user-info d-flex justify-content-between align-items-center">
-      <p className="footer-text text-center my-1 mr-2">{ userData.email }</p>
-      <img src="http://via.placeholder.com/25x25" alt={ userData.email } className="rounded-circle" />
+      <p className="footer-text text-center my-1 mr-2">{userData.email}</p>
+      <img src="http://via.placeholder.com/25x25" alt={userData.email} className="rounded-circle" />
     </div>
   )
 }

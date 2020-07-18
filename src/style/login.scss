@@ -20,7 +20,8 @@
     }
   }
 
-  .mail-wrapper, .pass-wrapper {
+  .mail-wrapper,
+  .pass-wrapper {
     position: relative;
     @include before {
       font-family: FontAwesome;
@@ -32,13 +33,13 @@
 
   .mail-wrapper {
     @include before {
-      content: '\f003';
+      content: "\f003";
     }
   }
 
   .pass-wrapper {
     @include before {
-      content: '\f084';
+      content: "\f084";
     }
   }
 

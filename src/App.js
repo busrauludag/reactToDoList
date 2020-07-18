@@ -28,14 +28,14 @@ function App() {
             render={() => {
               return (
                 // userData ? <Redirect to="/todolist" /> : <Redirect to="/login" />
-                <Redirect to="/login" /> 
+                <Redirect to="/login" />
               )
             }}
           />
           <Route exact path="/login" component={SignIn} />
           <Route exact path="/todolist" component={List} />
           <Route exact path="/todolist/:id" component={Detail} />
-          <Route component={NotFound}/>
+          <Route component={NotFound} />
         </Switch>
       </div>
     </Router>

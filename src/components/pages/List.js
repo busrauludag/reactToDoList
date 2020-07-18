@@ -47,15 +47,15 @@ const HomeList = () => {
                 <li key={index} className="list-group-item list-group-item-action">
                   <Link to={`/todolist/${item.id}`}>
                     <span className={`mr-2${item.isCompleted ? " is-done" : ""}`}>
-                      {item.title} 
+                      {item.title}
                       <i className="float-right">
                         {((index + 1) > 9 && (index + 1) < 100) ? '0' : ((index + 1) < 10 ? '00' : '')}{(index + 1)}
                       </i>
                     </span>
                   </Link>
                   <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="checkbox" defaultChecked={item.isCompleted} name={`isCompleted${item.id}`} value={item.isCompleted} 
-                    onChange={e => selectionChanged(e, item)} />
+                    <input className="form-check-input" type="checkbox" defaultChecked={item.isCompleted} name={`isCompleted${item.id}`} value={item.isCompleted}
+                      onChange={e => selectionChanged(e, item)} />
                   </div>
                   <div className="form-check-inline">
                     <button className="btn btn-danger btn-sm delete-btn rounded-circle p-1"

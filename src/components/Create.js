@@ -32,7 +32,7 @@ const Create = ({ loadTodos }) => {
       <div className="card-body p-4 p-sm-5">
         <form onSubmit={e => onSubmit(e)}>
           <div className="form-group">
-            <input type="text" className="form-control" placeholder="What needs to be done?" name="title" 
+            <input type="text" className="form-control" placeholder="What needs to be done?" name="title"
               value={todo.title || ''}
               onChange={e => onInputChange(e)} />
           </div>
