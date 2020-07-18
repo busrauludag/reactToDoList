@@ -34,15 +34,6 @@ const HomeList = () => {
     loadTodos();
   }
 
-  let todoZero = '';
-  if(todos.length > 9 && todos.length < 100) {
-    todoZero = '0';
-  } else if(todos.length <= 9) {
-    todoZero = '00';
-  } else {
-    todoZero= '';
-  }
-
   return (
     <div className="container todolist">
       <UserInfo />
@@ -56,7 +47,10 @@ const HomeList = () => {
                 <li key={index} className="list-group-item list-group-item-action">
                   <Link to={`/todolist/${item.id}`}>
                     <span className={`mr-2${item.isCompleted ? " is-done" : ""}`}>
-                      {item.title} <i className="float-right">{todoZero + (index + 1)}</i>
+                      {item.title} 
+                      <i className="float-right">
+                        {((index + 1) > 9 && (index + 1) < 100) ? '0' : ((index + 1) < 10 ? '00' : '')}{(index + 1)}
+                      </i>
                     </span>
                   </Link>
                   <div className="form-check form-check-inline">
