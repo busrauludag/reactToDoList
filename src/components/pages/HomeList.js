@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Title from './../Title';
 import Footer from './../Footer';
 import Create from '../Create';
+import UserInfo from '../UserInfo';
 
 const HomeList = () => {
 
@@ -44,6 +45,7 @@ const HomeList = () => {
 
   return (
     <div className="container todolist">
+      <UserInfo />
       <div className="todolist__wrapper d-flex flex-column justify-content-center align-items-center">
         <Title />
         <Create loadTodos={loadTodos} />

@@ -7,7 +7,6 @@ import SignIn from './components/pages/SignIn';
 import HomeList from './components/pages/HomeList';
 import Detail from './components/pages/Detail';
 import NotFound from './components/pages/NotFound';
-import UserInfo from './components/UserInfo';
 
 function App() {
 
@@ -22,7 +21,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <UserInfo />
         <Switch>
           <Route
             exact

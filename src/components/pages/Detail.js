@@ -4,6 +4,7 @@ import axios from 'axios';
 import { todoUrl } from '../../urls';
 import Title from './../Title';
 import Footer from './../Footer';
+import UserInfo from '../UserInfo';
 
 const Detail = () => {
   const { id } = useParams();
@@ -24,6 +25,7 @@ const Detail = () => {
 
   return(
     <div className="container detail">
+      <UserInfo />
       <div className="detail__wrapper d-flex flex-column justify-content-center align-items-center">
         <Title />
         <div className="card w-100 mb-4">
