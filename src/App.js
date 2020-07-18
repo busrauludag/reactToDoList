@@ -17,7 +17,7 @@ function App() {
   };
 
   localStorage.setItem('user', JSON.stringify(userInfo));
-  const userData = localStorage.getItem('user');
+  // const userData = localStorage.getItem('user');
 
   return (
     <Router>
@@ -29,7 +29,8 @@ function App() {
             path="/"
             render={() => {
               return (
-                userData ? <Redirect to="/todolist" /> : <Redirect to="/login" /> 
+                // userData ? <Redirect to="/todolist" /> : <Redirect to="/login" />
+                <Redirect to="/login" /> 
               )
             }}
           />
