@@ -13,14 +13,14 @@ const Detail = () => {
     isCompleted: ''
   });
 
-  useEffect(() => {
-    loadTodo();
-  }, []);
-
   const loadTodo = async () => {
     const result = await axios.get(`${todoUrl}${id}`);
     setTodo(result.data);
   }
+
+  useEffect(() => {
+    loadTodo();
+  },);
 
   return(
     <div className="container detail">
