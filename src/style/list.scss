@@ -30,12 +30,16 @@
     &-button {
       position: absolute;
       bottom: -45px;
-      left: 45%;
+      left: 48%;
       right: auto;
       z-index: 5;
 
       @media (max-width: 768px) {
-        left: 40%;
+        left: 45%;
+      }
+
+      @media (max-width: 420px) {
+        left: 42%;
       }
 
       button {

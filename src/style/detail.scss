@@ -29,7 +29,7 @@
     .btn {
       position: absolute;
       bottom: -30px;
-      left: 46%;
+      left: 47%;
       right: auto;
       width: 60px;
       height: 60px;
@@ -41,7 +41,11 @@
       font-size: 20px;
 
       @media (max-width: 768px) {
-        left: 39%;
+        left: 45%;
+      }
+
+      @media (max-width: 420px) {
+        left: 40%;
       }
     }
   }

@@ -21,7 +21,7 @@ const Detail = () => {
 
   useEffect(() => {
     loadTodo();
-  });
+  }, []);
 
   return (
     <div className="container detail">
