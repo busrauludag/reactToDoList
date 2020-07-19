@@ -17,8 +17,10 @@ const SignIn = () => {
 
     if (_.isEqual(formData, userData)) {
       history.push('/todolist');
+    } else if(formData.email === '' && formData.password === '') {
+      alert('Kullanıcı adı ve şifre boş olamaz!');
     } else {
-      alert('Kullanıcı adı ya da şifre yanlış');
+      alert('Kullanıcı adı ya da şifre yanlış!');
     }
   }
 
