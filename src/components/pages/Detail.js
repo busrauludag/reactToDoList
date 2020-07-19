@@ -30,7 +30,9 @@ const Detail = () => {
         <div className="card w-100 mb-4">
           <div className="card-body pb-5">
             <h5 className="card-title mb-3 py-2">{todo.title}</h5>
-            <p className="card-text">{todo.description}</p>
+            <p className="card-text">
+              {todo.description ? todo.description : 'Bu taska ait bir açıklama bulunmamaktadır.'}
+            </p>
           </div>
           <Link to={'/todolist'} className="btn btn-primary text-center">
             <i className="fa fa-chevron-left" aria-hidden="true"></i>

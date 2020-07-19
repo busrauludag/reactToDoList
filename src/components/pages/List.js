@@ -43,7 +43,7 @@ const HomeList = () => {
         <div className="card w-100 mt-2">
           <div className="card-body p-0">
             <ul className="list-group">
-              {todos.map((item, index) => (
+              {todos.length ? todos.map((item, index) => (
                 <li key={index} className="list-group-item list-group-item-action">
                   <Link to={`/todolist/${item.id}`}>
                     <span className={`mr-2${item.isCompleted ? " is-done" : ""}`}>
@@ -64,7 +64,7 @@ const HomeList = () => {
                     </button>
                   </div>
                 </li>
-              ))}
+              )) : <p className="list-group-item mb-0">Görev taskında herhangi bir görev bulunmamaktadır.</p>}
             </ul>
           </div>
         </div>
